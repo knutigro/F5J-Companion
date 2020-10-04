@@ -1,7 +1,6 @@
 # Lua F5J trainer & logger widget for OpenTX
 
-![Screenshot](Widggets/F5JComp/screenshot.png)
-![Screenshot](Widggets/F5JComp/screenshot.png)
+![Screenshot](screenshot.png)
 
 Download the latest version: https://raw.githubusercontent.com/knutigro/lualogger/master/Widget/
 
