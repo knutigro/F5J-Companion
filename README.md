@@ -1,8 +1,8 @@
 ## OpenTX Lua script
 F5J COMPANION - For tracking and logging F5J flights
 
-![Screenshot](https://github.com/knutigro/F5J-Companion/blob/main/WIDGETS/F5JComp/screenshot.png)
-![Screenshot](https://github.com/knutigro/F5J-Companion/blob/main/WIDGETS/F5JLog/screenshot.png)
+![Screenshot](https://github.com/knutigro/F5J-Companion/blob/main/SD/WIDGETS/F5JComp/screenshot.png)
+![Screenshot](https://github.com/knutigro/F5J-Companion/blob/main/SD/WIDGETS/F5JLog/screenshot.png)
 
 ## Installation:
 - Download the latest version: https://github.com/knutigro/F5J-Companion/archive/main.zip
