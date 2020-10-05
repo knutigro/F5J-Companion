@@ -1,5 +1,5 @@
 # F5J Companion 
-- OpenTX Lua script for tracking and logging F5J flights
+OpenTX Lua script for tracking and logging F5J flights
 
 Works On OpenTX Version: 2.3.9
 
@@ -13,8 +13,7 @@ Author: Knutigro
  - Displays flighdata and calculate points according to the F5J rules.
  - Displays logs for the 5 most recent flights current day.
 
-
-### F5J COMPANION Widget
+### F5J Companion Widget
 ![Screenshot](https://github.com/knutigro/F5J-Companion/blob/main/SD/WIDGETS/F5JComp/screenshot.png)
 #### Description
 Timers will start counting once the StateSwitch is in down position and Throttle is moved to above minimum.
