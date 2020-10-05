@@ -6,6 +6,10 @@ F5J COMPANION - For tracking and logging F5J flights
 
 Download the latest version: https://github.com/knutigro/F5J-Companion/archive/main.zip
 
+Works On OpenTX Companion Version: 2.3.9
+
+Author: Knutigro
+
 ## Installation
 - Copy the contents of the SD folder to your radio SD Card.
 
@@ -30,6 +34,4 @@ Setting StateSwitch to up position will reset flight data and telemetry data.
 Displays the 5 latest flights from from current date.
 Complete logs can be found in the [/LOGS/F5JComp/](https://github.com/knutigro/F5J-Companion/tree/main/SD/LOGS/F5JComp) folder.
 
-Works On OpenTX Companion Version: 2.3.9
 
-Author: Knutigro
