@@ -1,5 +1,13 @@
 --[[
+	LUA widget script for showing data from the F5J Comp Widget
 
+	Displays the 5 latest flights from from current date.
+	Complete logs can be found in the /LOGS/F5JComp/ folder
+
+	Releases
+	1.00	Initial revision
+
+	Knutigro
 --]]
 
 local LOG_PATH = '/LOGS/F5JComp/'
@@ -112,7 +120,7 @@ end
 ui.drawLogo = function(x, y)
 	lcd.drawFilledRectangle(x, y, 320, 46, TITLE_BGCOLOR)
 	lcd.drawText( x + 4, y + 4, "F5J", DBLSIZE + CUSTOM_COLOR )
-	lcd.drawText( x + 64, y + 14, "- Companion Log", CUSTOM_COLOR )
+	lcd.drawText( x + 64, y + 14, "- Companion", CUSTOM_COLOR )
 	lcd.drawBitmap(ui.getBitmap("glider"),x + 234, y)
 end
 

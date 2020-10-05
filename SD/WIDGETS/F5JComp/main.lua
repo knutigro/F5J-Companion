@@ -9,11 +9,15 @@
 			       and timer 2 set to Countdown: Voice
 
 	Widget Settings:
-	- Trigger -> Throttle kill off + Throttle
-	- StateSwitch -> Is used to signal the start of thee flight (down), end of the flight and stop the timers (middle) then reset everything (up)
+	- StateSwitch -> Is used to signal the start of the flight (down), end of the flight and to stop the timers (middle) then reset everything (up)
 	- Throttle -> Is used to start the timer. Change to your throttle output.
 	- Altitude -> Telemetry for altitude
 	- TotalTime -> Maximum flighttime in minutes
+
+	 Timers will start counting once the StateSwitch is in down position and Throttle is moved to above minimum.
+	 Flight has to be manually stopped by switching the StateSwitch to middle position. This will also automatically 
+	 save the flight to the logs folder. Logs can be viewed in the F5JLog widget or downloaded to the computer from the /LOGS/F5JComp/ folder.
+	 Setting StateSwitch to up position will reset flight data and telemetry data.
 
 	Customization:
 	(1) The value where the throttle is meant to be active (defaults to -1024)
@@ -21,18 +25,16 @@
 	Releases
 	1.00	Initial revision
 
-	Knut, knutigro
+	Knutigro
 --]]
 
 local options = {
-	{ "Trigger", SOURCE, 0},
 	{ "StateSwitch", SOURCE, 0},
 	{ "Throttle", SOURCE, 0},
 	{ "Altitude", SOURCE, 0 },
 	{ "TotalTime", VALUE, 10 }
 }
 
-local TRIGGER = getFieldInfo( 'ch3' ).id
 local THR = getFieldInfo( 'ch3' ).id
 local ALT = getFieldInfo( 'ch2' ).id
 local SA = getFieldInfo( 'sa' ).id
@@ -304,7 +306,7 @@ end
 
 f5j.resetState = function()
 	-- wait for take-off
-	if getValue( TRIGGER ) > THROTTLE_MIN_HYSTERESIS then
+	if getValue( THR ) > THROTTLE_MIN_HYSTERESIS and getValue( SA ) > 0 and f5j.flight.state == 1 then
 		playFile( SOUND_PATH .. 'engon.wav' )
 		f5j.flight.timer2.start()
 		f5j.flight.timer1.start()
@@ -485,7 +487,6 @@ local function updateWithOptions(options)
 	ALT = options.Altitude
 	SA = options.StateSwitch
 	THR = options.Throttle
-	TRIGGER = options.Trigger
 
 	f5j.flight.timer1 = createTimer( 0, TOTAL_FLIGHT_TIME )	-- flight time
 	f5j.flight.timer2 = createTimer( 1, MAX_ENGINE_TIME )	-- engine time
