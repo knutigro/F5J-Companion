@@ -1,5 +1,5 @@
-# OpenTX Lua script
-F5J COMPANION - For tracking and logging F5J flights
+# F5J COMPANION - For tracking and logging F5J flights
+OpenTX Lua script
 
 Works On OpenTX Companion Version: 2.3.9
 
@@ -14,10 +14,9 @@ Author: Knutigro
  - Displays logs for the 5 most recent flights current day.
 
 ### F5J COMPANION Widget
-
 ![Screenshot](https://github.com/knutigro/F5J-Companion/blob/main/SD/WIDGETS/F5JComp/screenshot.png)
 
-####	Widget Settings
+#### Widget Settings
 - StateSwitch -> Is used to signal the start of the flight (down), end of the flight and to stop the timers (middle) then reset everything (up).
 - Throttle -> Is used to start the timer. Change to your throttle output.
 - Altitude -> Telemetry for altitude.
@@ -30,5 +29,6 @@ Setting StateSwitch to up position will reset flight data and telemetry data.
 
 ### F5J Logs Widget
 ![Screenshot](https://github.com/knutigro/F5J-Companion/blob/main/SD/WIDGETS/F5JLog/screenshot.png)
+#### Description
 Displays the 5 latest flights from from current date.
 Complete logs can be found in the [/LOGS/F5JComp/](https://github.com/knutigro/F5J-Companion/tree/main/SD/LOGS/F5JComp) folder.
